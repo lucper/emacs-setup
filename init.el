@@ -51,10 +51,13 @@
     
     ;; Custom icons
     all-the-icons
-
+    
     ;; Spacemacs themes
     spacemacs-theme
 
+    ;; Project navigation
+    projectile
+    
     ;; Startup screen
     dashboard))
 
@@ -93,7 +96,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (all-the-icons racket-mode dashboard undo-tree smex rainbow-delimiters persistent-soft paredit magit cider))))
+    (projectile page-break-lines all-the-icons racket-mode dashboard undo-tree smex rainbow-delimiters persistent-soft paredit magit cider))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
