@@ -8,7 +8,7 @@
 ;; Displays ugly form feed characters as
 ;; tidy horzontal rules.
 ;; Dependency for dashboard package.
-;(require 'page-break-lines)
+(require 'page-break-lines)
 
 ;; Themes
 (load-theme 'spacemacs-light t)
