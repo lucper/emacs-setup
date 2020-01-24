@@ -1,2 +1,1 @@
-# emacs_setup
-My personal Emacs setup
+My personal Emacs setup.
