@@ -1,5 +1,8 @@
-
+;; Custom icons
 (require 'all-the-icons)
+
+;; Custom icons for Ivy
+(all-the-icons-ivy-setup)
 
 ;; Displays ugly form feed characters as
 ;; tidy horizontal rules.
