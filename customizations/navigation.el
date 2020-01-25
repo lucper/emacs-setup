@@ -1,27 +1,21 @@
-;; Shows a list of buffers.
-(global-set-key (kbd "C-x C-b") 'ibuffer)
+;; Turn on Ivy by default
+(ivy-mode 1)
 
-;; Enhances M-x to allow easier execution of commands. Provides
-;; a filterable list of possible commands in the minibuffer.
-;; http://www.emacswiki.org/emacs/Smex
-(setq smex-save-file "~/.emacs.d/.smex-items")
-(smex-initialize)
-(global-set-key (kbd "M-x") 'smex)
-
-;; iso-mode allows to more easily navigate choices. For example,
-;; when you want to switch buffers, iso presents a list of buffers
-;; in the minibuffer. As you start to type a buffer's name, ido
-;; will narrow down the list of buffers to match the text you've
-;; typed in.
-;; http://www.emacswiki.org/emacs/InteractiveDoThings
-(ido-mode t)
-(setq ido-enable-flex-matching t)    ; allows partial matches
-(setq ido-use-filename-at-point nil) ; don't use the name at point
-(setq ido-use-virtual-buffers t)     ; includes buffer names of recently open files
-
-;; Enables ido in all contexts where it could be useful.
-(ido-ubiquitous-mode t)
-(ido-everywhere t)
+;; Binding Swiper and Counsel commmands
+(global-set-key (kbd "C-s") 'swiper)                ; Replaces isearch with swiper
+(global-set-key (kbd "M-x") 'counsel-M-x)           ; Gives M-x command Counsel features
+(global-set-key (kbd "C-x C-f") 'counsel-find-file) ; Gives C-x C-f command Counsel features
+(global-set-key (kbd "<f1> f") 'counsel-describe-function) 
+(global-set-key (kbd "<f1> v") 'counsel-describe-variable) 
+(global-set-key (kbd "<f1> l") 'counsel-find-library) 
+(global-set-key (kbd "<f2> i") 'counsel-info-lookup-symbol) 
+(global-set-key (kbd "<f2> u") 'counsel-unicode-char) 
+(global-set-key (kbd "C-c g") 'counsel-git)         
+(global-set-key (kbd "C-c j") 'counsel-git-grep)    
+(global-set-key (kbd "C-c k") 'counsel-ag)          ; Add Counsel/Ivy features to ag package
+(global-set-key (kbd "C-x l") 'counsel-locate) 
+(global-set-key (kbd "C-c C-r") 'ivy-resume)
+(global-set-key (kbd "C-x b") 'ivy-switch-buffer)
 
 ;; Turn on recent file mode so that you can more easily switch to
 ;; recently edited files when you first start emacs.
