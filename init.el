@@ -97,6 +97,9 @@
 ;; things below.
 (add-to-list 'load-path "~/.emacs.d/customizations")
 
+;; Python setup
+(load "setup-python.el")
+
 ;; Clojure setup
 (load "setup-clojure.el")
 
