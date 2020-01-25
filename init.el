@@ -22,35 +22,55 @@
   (package-refresh-contents))
 
 (defvar my-packages
-  '(;; Helps handling Lisp expressions.
+  '(;; Helps handling Lisp expressions
     paredit
 
-    ;; Key bindings and code colorization for Clojure.
+    ;; Python extension
+    elpy
+
+    ;; Autocompletion for Python
+    jedi
+    
+    ;; Key bindings and code colorization for Clojure
     clojure-mode
 
-    ;; extra syntax highlighting for Clojure
+    ;; Extra syntax highlighting for Clojure
     clojure-mode-extra-font-locking
+
+    ;; Integration with Clojure REPL
+    cider
     
     ;; Key bindings and code colorization for Racket
     racket-mode
-    
-    ;; Integration with Clojure REPL.
-    cider
 
-    ;; Colorful parenthesis mathcing.
+    ;; Collection of major and minor modes for Schemes
+    geiser
+
+    ;; Colorful parenthesis mathcing
     rainbow-delimiters
 
-    ;; Allows ido usage in as many contexts as possible.
-    ido-completing-read+
-    
-    ;; Git integration.
-    magit
+    ;; Navigation and autocompletion
+    ivy
 
-    ;; Enhances M-x to allow easir execution of commands.
-    smex
+    ;; Searches inside files
+    swiper
+
+    ;; Extra functionalities for Ivy
+    counsel
+    
+    ;; Git integration
+    magit
+    
+    ;; Ensures environment variables inside Emacs look the
+    ;; same as in the user's shell.
+    ;; http://github.com/purcell/exec-path-from-shell
+    exec-path-from-shell
     
     ;; Custom icons
     all-the-icons
+
+    ;; Custom icons for ivy
+    all-the-icons-ivy
     
     ;; Spacemacs themes
     spacemacs-theme
@@ -64,6 +84,10 @@
 (dolist (package my-packages)
   (when (not (package-installed-p package))
     (package-install package)))
+
+;; Sets $PATH from shell
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
 
 ;;;;;;;;;;;;;;;;;;;;
 ;; Customizations ;;
@@ -96,7 +120,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (projectile page-break-lines all-the-icons racket-mode dashboard undo-tree smex rainbow-delimiters persistent-soft paredit magit cider))))
+    (all-the-icons-ivy counsel swiper ivy exec-path-from-shell jedi elpy geiser projectile page-break-lines all-the-icons racket-mode dashboard undo-tree smex rainbow-delimiters persistent-soft paredit magit cider))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
