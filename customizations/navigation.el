@@ -1,6 +1,9 @@
 ;; Turn on Ivy by default
 (ivy-mode 1)
 
+;; Magit command
+(global-set-key (kbd "C-x g") 'magit-status)
+
 ;; Binding Swiper and Counsel commmands
 (global-set-key (kbd "C-s") 'swiper)                ; Replaces isearch with swiper
 (global-set-key (kbd "M-x") 'counsel-M-x)           ; Gives M-x command Counsel features
