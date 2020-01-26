@@ -25,6 +25,9 @@
   '(;; Helps handling Lisp expressions
     paredit
 
+    ;; Auto-completion for source code and REPL
+    company
+    
     ;; Python extension
     elpy
 
