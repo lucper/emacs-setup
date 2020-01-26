@@ -123,7 +123,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (all-the-icons-ivy counsel swiper ivy exec-path-from-shell jedi elpy geiser projectile page-break-lines all-the-icons racket-mode dashboard undo-tree smex rainbow-delimiters persistent-soft paredit magit cider))))
+    (transient all-the-icons-ivy counsel swiper ivy exec-path-from-shell jedi elpy geiser projectile page-break-lines all-the-icons racket-mode dashboard undo-tree smex rainbow-delimiters persistent-soft paredit magit cider))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
