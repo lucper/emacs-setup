@@ -1,3 +1,6 @@
+;; Enble COmpany globally
+(global-company-mode)
+
 ;; Globally prettify symbols.
 (global-prettify-symbols-mode 1)
 (setq prettify-symbols-alist '(("lambda" . 955)))
