@@ -1,4 +1,4 @@
-;; Enble COmpany globally
+;; Enble Company globally
 (global-company-mode)
 
 ;; Globally prettify symbols.
