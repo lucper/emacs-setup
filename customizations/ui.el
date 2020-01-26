@@ -1,3 +1,12 @@
+;; Removes the tool bar
+(tool-bar-mode -1)
+
+;; Removes the scroll bar
+(toggle-scroll-bar -1)
+
+;; Removes the menu bar
+(menu-bar-mode -1)
+
 ;; Custom icons
 (require 'all-the-icons)
 
