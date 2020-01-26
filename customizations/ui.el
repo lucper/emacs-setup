@@ -23,3 +23,8 @@
 
 ;; Themes
 (load-theme 'spacemacs-light t)
+
+;; Enable rainbow-delimiters in Racket and Clojure.
+(add-hook 'racket-mode-hook #'rainbow-delimiters-mode)
+(add-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
+
