@@ -1,5 +1,5 @@
 ;; Enble Company globally
-(global-company-mode)
+(add-hook 'after-init-hook 'global-company-mode)
 
 ;; Globally prettify symbols.
 (global-prettify-symbols-mode 1)
