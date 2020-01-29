@@ -1,8 +1,33 @@
 ;; Enable YASnippet globally
 (yas-global-mode 1)
+(global-set-key (kbd "<C-tab>") 'yas-expand)
 
 ;; Enable Company globally
 (add-hook 'after-init-hook 'global-company-mode)
+
+;; Code for solving conflicts with integration
+;; between company and yasnippet.
+;; https://www.emacswiki.org/emacs/CompanyMode
+(defun check-expansion ()
+  (save-excursion
+    (if (looking-at "\\_>") t
+      (backward-char 1)
+      (if (looking-at "\\.") t
+        (backward-char 1)
+        (if (looking-at "->") t nil)))))
+(defun do-yas-expand ()
+  (let ((yas/fallback-behavior 'return-nil))
+    (yas/expand)))
+(defun tab-indent-or-complete ()
+  (interactive)
+  (if (minibufferp)
+      (minibuffer-complete)
+    (if (or (not yas/minor-mode)
+            (null (do-yas-expand)))
+        (if (check-expansion)
+            (company-complete-common)
+          (indent-for-tab-command)))))
+(global-set-key [tab] 'tab-indent-or-complete)
 
 ;; Globally prettify symbols.
 (setq prettify-symbols-alist '(("alpha" . "#X03B1")
