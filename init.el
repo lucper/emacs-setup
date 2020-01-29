@@ -31,6 +31,12 @@
     ;; Python extension
     elpy
 
+    ;; Autocompletion for C headers
+    company-irony-c-headers
+
+    ;; Enhanced editing for C/C++
+    company-irony
+    
     ;; Autocompletion for Python
     jedi
     
@@ -100,12 +106,6 @@
 ;; things below.
 (add-to-list 'load-path "~/.emacs.d/customizations")
 
-;; Python setup
-(load "setup-python.el")
-
-;; Clojure setup
-(load "setup-clojure.el")
-
 ;; Make editing nicer.
 (load "editing.el")
 
@@ -114,6 +114,14 @@
 
 ;; Make navigation easier.
 (load "navigation.el")
+
+;; Languages setups
+; Python setup
+(load "setup-python.el")
+; Clojure setup
+(load "setup-clojure.el")
+; C-like setup
+(load "setup-c.el")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Added by Custom automatically ;;
@@ -126,7 +134,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (transient all-the-icons-ivy counsel swiper ivy exec-path-from-shell jedi elpy geiser projectile page-break-lines all-the-icons racket-mode dashboard undo-tree smex rainbow-delimiters persistent-soft paredit magit cider))))
+    (company-irony-c-headers company-irony auto-complete-c-headers transient all-the-icons-ivy counsel swiper ivy exec-path-from-shell jedi elpy geiser projectile page-break-lines all-the-icons racket-mode dashboard undo-tree smex rainbow-delimiters persistent-soft paredit magit cider))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
