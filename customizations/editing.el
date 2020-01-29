@@ -1,9 +1,13 @@
-;; Enble Company globally
+;; Enable Company globally
 (add-hook 'after-init-hook 'global-company-mode)
 
 ;; Globally prettify symbols.
+(setq prettify-symbols-alist '(("alpha" . "#X03B1")
+                               ("lambda" . "#X03BB")
+                               ("beta" . "#X03B2")
+                               ("gamma" . "#X03B3")
+                               ("delta" . "#X03B4")))
 (global-prettify-symbols-mode 1)
-(setq prettify-symbols-alist '(("lambda" . 955)))
 
 ;; Use spaces for tab.
 (setq-default indent-tabs-mode nil)
