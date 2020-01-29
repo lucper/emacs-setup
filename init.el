@@ -27,37 +27,30 @@
 
     ;; Auto-completion for source code and REPL
     company
+
+    ;; Collection of snippets for yasnippet
+    yasnippet-snippets
     
-    ;; Python extension
+    ;; Enhanced editing for Python
     elpy
-
-    ;; Autocompletion for C headers
-    company-irony-c-headers
-
-    ;; Enhanced editing for C/C++
-    company-irony
+    ;jedi
+    company-jedi
     
-    ;; Autocompletion for Python
-    jedi
-    
-    ;; Key bindings and code colorization for Clojure
+    ;; Enhanced editing for Clojure
     clojure-mode
-
-    ;; Extra syntax highlighting for Clojure
     clojure-mode-extra-font-locking
-
-    ;; Integration with Clojure REPL
     cider
     
-    ;; Key bindings and code colorization for Racket
+    ;; Enhanced editing for Racket/Scheme
     racket-mode
-
-    ;; Collection of major and minor modes for Schemes
     geiser
 
     ;; Colorful parenthesis mathcing
     rainbow-delimiters
 
+    ;; Syntax checking
+    flycheck
+    
     ;; Navigation and autocompletion
     ivy
 
@@ -77,8 +70,6 @@
     
     ;; Custom icons
     all-the-icons
-
-    ;; Custom icons for ivy
     all-the-icons-ivy
     
     ;; Spacemacs themes
@@ -88,7 +79,14 @@
     projectile
     
     ;; Startup screen
-    dashboard))
+    dashboard
+
+    ;; Enhanced editing for C/C++
+    irony
+    irony-eldoc
+    flycheck-irony
+    company-irony
+    company-irony-c-headers))
 
 (dolist (package my-packages)
   (when (not (package-installed-p package))
@@ -134,7 +132,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (company-irony-c-headers company-irony auto-complete-c-headers transient all-the-icons-ivy counsel swiper ivy exec-path-from-shell jedi elpy geiser projectile page-break-lines all-the-icons racket-mode dashboard undo-tree smex rainbow-delimiters persistent-soft paredit magit cider))))
+    (company-irony-c-headers company-irony flycheck-irony irony-eldoc irony company-jedi yasnippet-snippets transient all-the-icons-ivy counsel swiper ivy exec-path-from-shell elpy geiser projectile page-break-lines all-the-icons racket-mode dashboard undo-tree rainbow-delimiters persistent-soft paredit magit cider))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
