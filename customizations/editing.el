@@ -1,3 +1,6 @@
+;; Enable YASnippet globally
+(yas-global-mode 1)
+
 ;; Enable Company globally
 (add-hook 'after-init-hook 'global-company-mode)
 
