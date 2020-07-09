@@ -1,4 +1,5 @@
 ## Files
+
 | Command       | Description                                                           |
 |---------------|-----------------------------------------------------------------------|          
 | Ctrl+x b      | Switch or create new buffer. Enter the buffer name in the minibuffer. |
@@ -6,6 +7,7 @@
 | Ctrl+x Ctrl+s | Save buffer to a file.                                                |
 
 ## Movement
+
 | Command             | Description                                          |
 |---------------------|------------------------------------------------------|
 | Ctrl+g              | Quit whatever command you are trying to run.         |
@@ -21,13 +23,14 @@
 | Alt+gg              | Go to line.                                          |
 
 ## Selection with regions
+
 | Command   | Description |
 |-----------|-------------|
-|Ctrl+space | Sets a mark. When you move, everytinh between mark and point is a 
-              region. Ex. The sequence of commands Ctrl+space > some movement > 
-              backspace = deletes the region. |
+|Ctrl+space | Sets a mark. When you move, everytinh between mark and point is a region. \ | 
+|           | Ex. The sequence of commands Ctrl+space > some movement > backspace = deletes the region. |
 
 ## Kill and Yank (Copy, Paste and Cut)
+
 | Command | Description                                           |
 |---------|-------------------------------------------------------|
 | Ctrl+w  | Kill region (like Ctrl+x, cut).                       |
@@ -37,13 +40,16 @@
 | Ctrl+y  | Yank or copy last killed region (like Ctrl+s, paste). |
 
 ## Miscellaneous
+
 | Command | Description                                                  |
 |---------|--------------------------------------------------------------|
 | Alt+\   | Delete all spaces and tabs around point.                     |
 | Alt+/   | Cycles through possible expansions of the text before point. |
 
 ## Windows and Frames
-### A frame is composed of windows. The frame is just the "outer window".
+
+A frame is composed of windows. The frame is just the "outer window".
+
 | Command  | Description                                                             |
 |----------|-------------------------------------------------------------------------|
 | Ctrl+x o | Switch cursor to another window.                                        |
