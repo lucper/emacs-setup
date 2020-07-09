@@ -26,8 +26,7 @@
 
 | Command   | Description |
 |-----------|-------------|
-|Ctrl+space | Sets a mark. When you move, everytinh between mark and point is a region. <br> 
-              Ex. The sequence of commands Ctrl+space > some movement > backspace = deletes the region. |
+|Ctrl+space | Sets a mark. When you move, everytinh between mark and point is a region. <br> Ex. The sequence of commands Ctrl+space > some movement > backspace = deletes the region. |
 
 ## Kill and Yank (Copy, Paste and Cut)
 
@@ -59,31 +58,30 @@ A frame is composed of windows. The frame is just the "outer window".
 | Ctrl+x 0 | Delete current window.                                                  |
 
 ### CIDER Keybinds (minor-mode that complements clojure-mode)
-| Command             | Description                                     |
-|---------------------|-------------------------------------------------|
-|Ctrl+c Ctrl+q        | Quit REPL.                                      |
-|Ctrl+c Ctrl+o        | Clear output of last expression.                |
-|Ctrl+u Ctrl+c Ctrl+o | Clear REPL buffer.                              |
-|Ctrl+c Ctrl-z        | Jump between source and REPL buffers.           |
-|Ctrl+c Ctrl+b        | Interrupt evaluation.                           |
-|Ctrl+c Ctrl+e        | Evaluate expression immediatly preceding point. |
-|Ctrl+c Ctrl+k        | Compile current buffer.                         |
-|Ctrl+c Alt+n Alt+n   | Switch to namespace of current buffer.          |
-|Ctrl+cdd             | Display documentation for symbol under point.
-                        Press q to quit documentation window.           |
-|Ctrl+Up, Ctrl+Down   | Cycle through REPL history.                     |
+| Command             | Description                                                                         |
+|---------------------|-------------------------------------------------------------------------------------|
+|Ctrl+c Ctrl+q        | Quit REPL.                                                                          |
+|Ctrl+c Ctrl+o        | Clear output of last expression.                                                    |
+|Ctrl+u Ctrl+c Ctrl+o | Clear REPL buffer.                                                                  |
+|Ctrl+c Ctrl-z        | Jump between source and REPL buffers.                                               |
+|Ctrl+c Ctrl+b        | Interrupt evaluation.                                                               |
+|Ctrl+c Ctrl+e        | Evaluate expression immediatly preceding point.                                     |
+|Ctrl+c Ctrl+k        | Compile current buffer.                                                             |
+|Ctrl+c Alt+n Alt+n   | Switch to namespace of current buffer.                                              |
+|Ctrl+cdd             | Display documentation for symbol under point. Press q to quit documentation window. |
+|Ctrl+Up, Ctrl+Down   | Cycle through REPL history.                                                         |
 
 ### Paredit (minor-mode for Lisp's parentheses)
 #### Wrapping, Slurping and Barfing
-Alt+s                 Splices (removes) "",(),[] or {) around point.
-Alt+Up                Splices s-expressions backwardss from rear of point.
-Alt+Down              Splices s-expressions forward from rear of point.
-Alt+(                 Wrapping. Surrounds the expression after
-                      point with parentheses.
-Ctrl+Right            Slurping. Expands a closing parentheses to
-                      include the next expression to the right.
-Ctrl+Left             Barfing. Contracts a closing parentheses to
-                      remove the last expression.
+| Command   | Description                                                                          |
+|-----------|--------------------------------------------------------------------------------------|
+|Alt+s      | Splices (removes) "",(),[] or {) around point.                                       |
+|Alt+Up     | Splices s-expressions backwardss from rear of point.                                 |
+|Alt+Down   | Splices s-expressions forward from rear of point.                                    |
+|Alt+(      | Wrapping. Surrounds the expression after point with parentheses.                     |
+|Ctrl+Right | Slurping. Expands a closing parentheses to include the next expression to the right. |
+|Ctrl+Left  | Barfing. Contracts a closing parentheses to remove the last expression.              |
+  
 Ex. Consider (+ 1 |2 3) where | is the point. 
 1. Pressing Alt+(, adding +, then space: 
 (+ 1 (+ |2) 3)
@@ -91,6 +89,9 @@ Ex. Consider (+ 1 |2 3) where | is the point.
 (+ 1 (+ |2 3)) 
 3. Pressing Ctrl+Left:
 (+ 1 (+ | 2) 3)
+
 #### Navigation
-Ctrl+Alt+f            Move to the closing parenthesis.              
-Ctrl+Alt+b            Move to the opening parenthesis.
+| Command   | Description                      |
+|-----------|----------------------------------|
+|Ctrl+Alt+f | Move to the closing parenthesis. |             
+|Ctrl+Alt+b | Move to the opening parenthesis. |
