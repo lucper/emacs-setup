@@ -1,7 +1,9 @@
 ## Files
-Ctrl+x b              Switch or create new buffer. Enter the buffer name in the minibuffer.
-Ctrl+x Ctrl+f         Open or create new file. Enter the file's path. 
-Ctrl+x Ctrl+s         Save buffer to a file.
+|Command       | Description                                                           |
+|--------------|-----------------------------------------------------------------------|          
+|Ctrl+x b      | Switch or create new buffer. Enter the buffer name in the minibuffer. |
+|Ctrl+x Ctrl+f | Open or create new file. Enter the file's path.                       |
+|Ctrl+x Ctrl+s | Save buffer to a file.                                                |
 
 ## Movement
 Ctrl+g                Quit whatever command you are trying to run.
