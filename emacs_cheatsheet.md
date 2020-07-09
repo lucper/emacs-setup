@@ -26,8 +26,8 @@
 
 | Command   | Description |
 |-----------|-------------|
-|Ctrl+space | Sets a mark. When you move, everytinh between mark and point is a region. <br> | 
-|           | Ex. The sequence of commands Ctrl+space > some movement > backspace = deletes the region. |
+|Ctrl+space | Sets a mark. When you move, everytinh between mark and point is a region. <br> 
+              Ex. The sequence of commands Ctrl+space > some movement > backspace = deletes the region. |
 
 ## Kill and Yank (Copy, Paste and Cut)
 
